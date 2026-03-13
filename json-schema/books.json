@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-books/refs/heads/main/json-schema/books.json",
+  "title": "Google Books Volume",
+  "description": "A volume resource from the Google Books API representing a book or publication.",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "const": "books#volume"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the volume."
+    },
+    "etag": {
+      "type": "string"
+    },
+    "selfLink": {
+      "type": "string",
+      "format": "uri"
+    },
+    "volumeInfo": {
+      "type": "object",
+      "description": "General volume information.",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Volume title."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Volume subtitle."
+        },
+        "authors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "The names of the authors."
+        },
+        "publisher": {
+          "type": "string",
+          "description": "Publisher of this volume."
+        },
+        "publishedDate": {
+          "type": "string",
+          "description": "Date of publication."
+        },
+        "description": {
+          "type": "string",
+          "description": "A synopsis of the volume."
+        },
+        "industryIdentifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["ISBN_10", "ISBN_13", "ISSN", "OTHER"]
+              },
+              "identifier": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "pageCount": {
+          "type": "integer",
+          "description": "Total number of pages."
+        },
+        "categories": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "A list of subject categories."
+        },
+        "averageRating": {
+          "type": "number",
+          "description": "The mean review rating."
+        },
+        "ratingsCount": {
+          "type": "integer",
+          "description": "The number of review ratings."
+        },
+        "imageLinks": {
+          "type": "object",
+          "properties": {
+            "smallThumbnail": {
+              "type": "string",
+              "format": "uri"
+            },
+            "thumbnail": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        "language": {
+          "type": "string",
+          "description": "Best language for this volume based on content."
+        }
+      },
+      "required": ["title"]
+    },
+    "saleInfo": {
+      "type": "object",
+      "properties": {
+        "country": { "type": "string" },
+        "saleability": {
+          "type": "string",
+          "enum": ["FOR_SALE", "FREE", "NOT_FOR_SALE", "FOR_PREORDER"]
+        },
+        "isEbook": { "type": "boolean" },
+        "listPrice": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "number" },
+            "currencyCode": { "type": "string" }
+          }
+        }
+      }
+    },
+    "accessInfo": {
+      "type": "object",
+      "properties": {
+        "viewability": {
+          "type": "string",
+          "enum": ["PARTIAL", "ALL_PAGES", "NO_PAGES", "UNKNOWN"]
+        },
+        "embeddable": { "type": "boolean" },
+        "publicDomain": { "type": "boolean" }
+      }
+    }
+  },
+  "required": ["kind", "id", "volumeInfo"]
+}

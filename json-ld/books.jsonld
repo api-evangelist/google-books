@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gbooks": "https://www.googleapis.com/books/v1/",
+    "Volume": "schema:Book",
+    "Bookshelf": "schema:BookSeries",
+    "id": "schema:identifier",
+    "title": "schema:name",
+    "subtitle": "schema:alternativeHeadline",
+    "authors": "schema:author",
+    "publisher": "schema:publisher",
+    "publishedDate": "schema:datePublished",
+    "description": "schema:description",
+    "pageCount": "schema:numberOfPages",
+    "categories": "schema:genre",
+    "averageRating": "schema:aggregateRating",
+    "ratingsCount": "schema:ratingCount",
+    "language": "schema:inLanguage",
+    "imageLinks": "schema:image",
+    "thumbnail": "schema:thumbnailUrl",
+    "previewLink": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "isbn": "schema:isbn",
+    "saleability": "schema:availability",
+    "isEbook": "schema:bookFormat",
+    "listPrice": "schema:price",
+    "currencyCode": "schema:priceCurrency"
+  }
+}

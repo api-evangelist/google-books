@@ -1,0 +1,391 @@
+openapi: 3.1.0
+info:
+  title: Google Books API
+  description: >-
+    The Google Books API allows you to perform full-text searches and retrieve
+    book information, viewability, and eBook availability. You can also manage
+    personal bookshelves, access volume metadata, and work with user library
+    data.
+  version: v1
+  contact:
+    name: Google
+    url: https://developers.google.com/books
+servers:
+  - url: https://www.googleapis.com/books/v1
+paths:
+  /volumes:
+    get:
+      operationId: listVolumes
+      summary: Search for volumes
+      description: Performs a book search.
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Full-text search query string.
+        - name: maxResults
+          in: query
+          schema:
+            type: integer
+            maximum: 40
+        - name: startIndex
+          in: query
+          schema:
+            type: integer
+        - name: orderBy
+          in: query
+          schema:
+            type: string
+            enum:
+              - relevance
+              - newest
+        - name: printType
+          in: query
+          schema:
+            type: string
+            enum:
+              - all
+              - books
+              - magazines
+        - name: filter
+          in: query
+          schema:
+            type: string
+            enum:
+              - ebooks
+              - free-ebooks
+              - full
+              - paid-ebooks
+              - partial
+        - name: langRestrict
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolumeListResponse'
+  /volumes/{volumeId}:
+    get:
+      operationId: getVolume
+      summary: Get a volume
+      description: Gets volume information for a single volume.
+      parameters:
+        - name: volumeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Volume'
+  /users/{userId}/bookshelves:
+    get:
+      operationId: listBookshelves
+      summary: List bookshelves
+      description: Retrieves a list of public bookshelves for the specified user.
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookshelfListResponse'
+  /users/{userId}/bookshelves/{shelf}:
+    get:
+      operationId: getBookshelf
+      summary: Get a bookshelf
+      description: Retrieves metadata for a specific bookshelf for the specified user.
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: shelf
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bookshelf'
+  /users/{userId}/bookshelves/{shelf}/volumes:
+    get:
+      operationId: listBookshelfVolumes
+      summary: List volumes in a bookshelf
+      description: Retrieves volumes in a specific bookshelf for the specified user.
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: shelf
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: maxResults
+          in: query
+          schema:
+            type: integer
+        - name: startIndex
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VolumeListResponse'
+  /mylibrary/bookshelves:
+    get:
+      operationId: listMyBookshelves
+      summary: List my bookshelves
+      description: Retrieves a list of bookshelves belonging to the authenticated user.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookshelfListResponse'
+  /mylibrary/bookshelves/{shelf}/addVolume:
+    post:
+      operationId: addVolumeToBookshelf
+      summary: Add volume to bookshelf
+      description: Adds a volume to a bookshelf.
+      parameters:
+        - name: shelf
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: volumeId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /mylibrary/bookshelves/{shelf}/removeVolume:
+    post:
+      operationId: removeVolumeFromBookshelf
+      summary: Remove volume from bookshelf
+      description: Removes a volume from a bookshelf.
+      parameters:
+        - name: shelf
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: volumeId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+components:
+  schemas:
+    Volume:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: "books#volume"
+        id:
+          type: string
+        etag:
+          type: string
+        selfLink:
+          type: string
+          format: uri
+        volumeInfo:
+          type: object
+          properties:
+            title:
+              type: string
+            subtitle:
+              type: string
+            authors:
+              type: array
+              items:
+                type: string
+            publisher:
+              type: string
+            publishedDate:
+              type: string
+            description:
+              type: string
+            industryIdentifiers:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    enum:
+                      - ISBN_10
+                      - ISBN_13
+                      - ISSN
+                      - OTHER
+                  identifier:
+                    type: string
+            pageCount:
+              type: integer
+            categories:
+              type: array
+              items:
+                type: string
+            averageRating:
+              type: number
+            ratingsCount:
+              type: integer
+            imageLinks:
+              type: object
+              properties:
+                smallThumbnail:
+                  type: string
+                  format: uri
+                thumbnail:
+                  type: string
+                  format: uri
+            language:
+              type: string
+            previewLink:
+              type: string
+              format: uri
+            infoLink:
+              type: string
+              format: uri
+        saleInfo:
+          type: object
+          properties:
+            country:
+              type: string
+            saleability:
+              type: string
+              enum:
+                - FOR_SALE
+                - FREE
+                - NOT_FOR_SALE
+                - FOR_PREORDER
+            isEbook:
+              type: boolean
+            listPrice:
+              type: object
+              properties:
+                amount:
+                  type: number
+                currencyCode:
+                  type: string
+        accessInfo:
+          type: object
+          properties:
+            country:
+              type: string
+            viewability:
+              type: string
+              enum:
+                - PARTIAL
+                - ALL_PAGES
+                - NO_PAGES
+                - UNKNOWN
+            embeddable:
+              type: boolean
+            publicDomain:
+              type: boolean
+            epub:
+              type: object
+              properties:
+                isAvailable:
+                  type: boolean
+            pdf:
+              type: object
+              properties:
+                isAvailable:
+                  type: boolean
+    VolumeListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        totalItems:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Volume'
+    Bookshelf:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: "books#bookshelf"
+        id:
+          type: integer
+        selfLink:
+          type: string
+          format: uri
+        title:
+          type: string
+        access:
+          type: string
+          enum:
+            - PRIVATE
+            - PUBLIC
+        updated:
+          type: string
+          format: date-time
+        volumeCount:
+          type: integer
+    BookshelfListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookshelf'
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/books: Manage your books
+    apiKey:
+      type: apiKey
+      in: query
+      name: key
+security:
+  - oauth2: []
+  - apiKey: []
