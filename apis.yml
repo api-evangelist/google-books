@@ -1,5 +1,5 @@
 aid: google-books
-name: Google Books API
+name: Google Books
 description: >-
   The Google Books API allows you to perform full-text searches and retrieve
   book information, viewability, and eBook availability. You can search for
