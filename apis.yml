@@ -21,7 +21,7 @@ tags:
   - Reading
 apis:
   - aid: google-books:google-books
-    name: Google Books API v1
+    name: Google Books API V1
     description: >-
       The Google Books API provides programmatic access to Google Books data.
       Search for volumes, retrieve book metadata, manage bookshelves, and
