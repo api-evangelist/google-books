@@ -34,11 +34,11 @@ apis:
       - type: JSONSchema
         url: json-schema/books.json
 common:
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developers.google.com/books/docs/v1/getting_started
   - type: Pricing
     url: https://developers.google.com/books/docs/v1/using
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/books.jsonld
 maintainers:
   - FN: Kin Lane
