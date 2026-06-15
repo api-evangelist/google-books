@@ -1,0 +1,914 @@
+{
+  "item": [
+    {
+      "id": "ada906f5-514c-4239-b8ff-3008c4e18daf",
+      "name": "Search for volumes",
+      "request": {
+        "name": "Search for volumes",
+        "description": {
+          "content": "Performs a book search.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "volumes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "q",
+              "value": "<string>",
+              "description": "(Required) Full-text search query string."
+            },
+            {
+              "disabled": false,
+              "key": "maxResults",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "startIndex",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "orderBy",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "printType",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "filter",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "langRestrict",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "8cef8f32-4de1-4ae7-8286-7befa53aec9c",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "volumes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "startIndex",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "orderBy",
+                  "value": "<string>"
+                },
+                {
+                  "key": "printType",
+                  "value": "<string>"
+                },
+                {
+                  "key": "filter",
+                  "value": "<string>"
+                },
+                {
+                  "key": "langRestrict",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"kind\": \"string\",\n  \"totalItems\": 7770,\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"etag\": \"string\",\n      \"selfLink\": \"https://vwUIgatKwjeROeQiqdeXxrUidWcSrp.emmwQ+Vjnxg9fgvDR1Ch8.QHASQbfD\",\n      \"volumeInfo\": {\n        \"title\": \"string\",\n        \"subtitle\": \"string\",\n        \"authors\": [\n          \"string\",\n          \"string\"\n        ],\n        \"publisher\": \"string\",\n        \"publishedDate\": \"string\",\n        \"description\": \"string\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"string\"\n          },\n          {\n            \"type\": \"ISSN\",\n            \"identifier\": \"string\"\n          }\n        ],\n        \"pageCount\": 3096,\n        \"categories\": [\n          \"string\",\n          \"string\"\n        ],\n        \"averageRating\": 6919.849590056842,\n        \"ratingsCount\": 5661,\n        \"imageLinks\": {\n          \"smallThumbnail\": \"https://FDgBgKqVzHriAkaAKcJiWNNtNZuTCUZ.xlm9LBSqsRi5eb9OFQXLgQUT2pQV-75jn8H-3XtJxHgWDiEOUGadVCnMhaVINQEcTr+\",\n          \"thumbnail\": \"http://OpEXErcxbmvBbjwYGfV.uxoMk5yciCpeQoT7eUi2qYtJqxwWOHr5.rxU3a9Z8JR2pv.opO2Q0Ew4.IJ-CPlnBc\"\n        },\n        \"language\": \"string\",\n        \"previewLink\": \"https://pXnxARAyjpkdZXQH.facCMQTJxCFRoB\",\n        \"infoLink\": \"http://TNDmzAwqYSnstWSHtpVA.loofr\"\n      },\n      \"saleInfo\": {\n        \"country\": \"string\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": true,\n        \"listPrice\": {\n          \"amount\": 7039.889578493842,\n          \"currencyCode\": \"string\"\n        }\n      },\n      \"accessInfo\": {\n        \"country\": \"string\",\n        \"viewability\": \"UNKNOWN\",\n        \"embeddable\": false,\n        \"publicDomain\": true,\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        }\n      }\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"etag\": \"string\",\n      \"selfLink\": \"https://sTtZNJvxRwRokoINbMZJ.eosjyHKlG8j,MujlV9fYptSQ,DbCOd429aGB+ffhQGy2PHZPUPG9wPtThrgJ\",\n      \"volumeInfo\": {\n        \"title\": \"string\",\n        \"subtitle\": \"string\",\n        \"authors\": [\n          \"string\",\n          \"string\"\n        ],\n        \"publisher\": \"string\",\n        \"publishedDate\": \"string\",\n        \"description\": \"string\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"string\"\n          },\n          {\n            \"type\": \"ISSN\",\n            \"identifier\": \"string\"\n          }\n        ],\n        \"pageCount\": 4360,\n        \"categories\": [\n          \"string\",\n          \"string\"\n        ],\n        \"averageRating\": 1115.3424520033873,\n        \"ratingsCount\": 4534,\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://lnBYtOFE.sqsaN2oTjCpDLgbw1,SZp\",\n          \"thumbnail\": \"http://FdeRoqQs.ojbo5f-AGFEG\"\n        },\n        \"language\": \"string\",\n        \"previewLink\": \"https://fvQBxcQoepPhArqspFjtmbvyuHioiE.qlktLOQosngjSS.5IsvHp3sT79JHlHrTChpL8lV,LDsEjxFT8XWZ4zY4Bj7\",\n        \"infoLink\": \"http://qiIYQLC.snGagNElHAG5rio-FS1ZlYyYhfBnA1ZCA8,s249uTKUIJZ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"string\",\n        \"saleability\": \"FOR_PREORDER\",\n        \"isEbook\": false,\n        \"listPrice\": {\n          \"amount\": 6929.694132738063,\n          \"currencyCode\": \"string\"\n        }\n      },\n      \"accessInfo\": {\n        \"country\": \"string\",\n        \"viewability\": \"ALL_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        }\n      }\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0309833d-1132-472b-a037-d97cfe7d779c",
+      "name": "Get a volume",
+      "request": {
+        "name": "Get a volume",
+        "description": {
+          "content": "Gets volume information for a single volume.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "volumes",
+            ":volumeId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "volumeId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a1861461-7875-4819-93c9-eb0aecc456e8",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "volumes",
+                ":volumeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "volumeId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"etag\": \"string\",\n  \"selfLink\": \"https://aOKtYsa.wrEtbNeIIVo4ux6jL6O8X8N3Ze5o7IVnMgGlTgpC\",\n  \"volumeInfo\": {\n    \"title\": \"string\",\n    \"subtitle\": \"string\",\n    \"authors\": [\n      \"string\",\n      \"string\"\n    ],\n    \"publisher\": \"string\",\n    \"publishedDate\": \"string\",\n    \"description\": \"string\",\n    \"industryIdentifiers\": [\n      {\n        \"type\": \"OTHER\",\n        \"identifier\": \"string\"\n      },\n      {\n        \"type\": \"ISSN\",\n        \"identifier\": \"string\"\n      }\n    ],\n    \"pageCount\": 2389,\n    \"categories\": [\n      \"string\",\n      \"string\"\n    ],\n    \"averageRating\": 7223.912696704176,\n    \"ratingsCount\": 2456,\n    \"imageLinks\": {\n      \"smallThumbnail\": \"http://MApbWIhVcLqymIWw.jsfmjaNm8aL7LZPZP28WU0WiboMvHftoYMTI.D3aaH5SUCTT4Yayxl3NEvh9m\",\n      \"thumbnail\": \"http://qakpsZZDSJadCqlQFiSwXXl.xlNH.t-P7PpANz3,7QBsuIVD2Wz3xdPXa3RQMvdVIXZXFuSQcs+OUzjMr8stquvTyucz+DpGKYR93S\"\n    },\n    \"language\": \"string\",\n    \"previewLink\": \"https://sMoTCukznuVnmckNl.ydrsuLztpu-hwTWKb\",\n    \"infoLink\": \"https://ydmEkLKSEC.cguKumDFG0qpgY2r5Enj7EYmDNMCJLgbcOGpOSN13kh,,oGodAXvswpuAn6iGfQLL\"\n  },\n  \"saleInfo\": {\n    \"country\": \"string\",\n    \"saleability\": \"FREE\",\n    \"isEbook\": false,\n    \"listPrice\": {\n      \"amount\": 3503.963568810613,\n      \"currencyCode\": \"string\"\n    }\n  },\n  \"accessInfo\": {\n    \"country\": \"string\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": false,\n    \"publicDomain\": true,\n    \"epub\": {\n      \"isAvailable\": true\n    },\n    \"pdf\": {\n      \"isAvailable\": true\n    }\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a2491e9e-4731-49ad-ae1b-a0216fc03dbe",
+      "name": "List bookshelves",
+      "request": {
+        "name": "List bookshelves",
+        "description": {
+          "content": "Retrieves a list of public bookshelves for the specified user.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "users",
+            ":userId",
+            "bookshelves"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "57850f79-ef6d-43c5-9478-61a8543616b3",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "users",
+                ":userId",
+                "bookshelves"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"kind\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": 266,\n      \"selfLink\": \"http://aRdOdyAbPWHTdocImYSDnuZjUMvXxs.yejfPCdHWk0nsrW7Ft2.qJ,\",\n      \"title\": \"string\",\n      \"access\": \"PRIVATE\",\n      \"updated\": \"1977-05-19T11:22:56.580Z\",\n      \"volumeCount\": 1809\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": 778,\n      \"selfLink\": \"http://JpcRTeLRMMcFBgugvxoQtOH.xhadfGapf25JhEE.6cNHyxOZcMhsfF\",\n      \"title\": \"string\",\n      \"access\": \"PRIVATE\",\n      \"updated\": \"2001-10-08T01:51:36.936Z\",\n      \"volumeCount\": 3880\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5a1fa838-877a-41bf-96ec-84c04901657d",
+      "name": "Get a bookshelf",
+      "request": {
+        "name": "Get a bookshelf",
+        "description": {
+          "content": "Retrieves metadata for a specific bookshelf for the specified user.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "users",
+            ":userId",
+            "bookshelves",
+            ":shelf"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "shelf",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "5bed774d-0aac-4849-a0e4-27b13a06a541",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "users",
+                ":userId",
+                "bookshelves",
+                ":shelf"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shelf",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"kind\": \"string\",\n  \"id\": 6073,\n  \"selfLink\": \"http://vrsDXQDZABgFsbhWfcNakUGNiyDtu.hixEA\",\n  \"title\": \"string\",\n  \"access\": \"PRIVATE\",\n  \"updated\": \"2011-11-04T00:31:07.999Z\",\n  \"volumeCount\": 7220\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "77710b17-b5e4-4b30-b963-ecfbd5f312df",
+      "name": "List volumes in a bookshelf",
+      "request": {
+        "name": "List volumes in a bookshelf",
+        "description": {
+          "content": "Retrieves volumes in a specific bookshelf for the specified user.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "users",
+            ":userId",
+            "bookshelves",
+            ":shelf",
+            "volumes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "maxResults",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "startIndex",
+              "value": "<integer>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "userId",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "shelf",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7ada2868-330b-4b62-a27e-b94c348f1c09",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "users",
+                ":userId",
+                "bookshelves",
+                ":shelf",
+                "volumes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "startIndex",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "userId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shelf",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"kind\": \"string\",\n  \"totalItems\": 7770,\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"etag\": \"string\",\n      \"selfLink\": \"https://vwUIgatKwjeROeQiqdeXxrUidWcSrp.emmwQ+Vjnxg9fgvDR1Ch8.QHASQbfD\",\n      \"volumeInfo\": {\n        \"title\": \"string\",\n        \"subtitle\": \"string\",\n        \"authors\": [\n          \"string\",\n          \"string\"\n        ],\n        \"publisher\": \"string\",\n        \"publishedDate\": \"string\",\n        \"description\": \"string\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"string\"\n          },\n          {\n            \"type\": \"ISSN\",\n            \"identifier\": \"string\"\n          }\n        ],\n        \"pageCount\": 3096,\n        \"categories\": [\n          \"string\",\n          \"string\"\n        ],\n        \"averageRating\": 6919.849590056842,\n        \"ratingsCount\": 5661,\n        \"imageLinks\": {\n          \"smallThumbnail\": \"https://FDgBgKqVzHriAkaAKcJiWNNtNZuTCUZ.xlm9LBSqsRi5eb9OFQXLgQUT2pQV-75jn8H-3XtJxHgWDiEOUGadVCnMhaVINQEcTr+\",\n          \"thumbnail\": \"http://OpEXErcxbmvBbjwYGfV.uxoMk5yciCpeQoT7eUi2qYtJqxwWOHr5.rxU3a9Z8JR2pv.opO2Q0Ew4.IJ-CPlnBc\"\n        },\n        \"language\": \"string\",\n        \"previewLink\": \"https://pXnxARAyjpkdZXQH.facCMQTJxCFRoB\",\n        \"infoLink\": \"http://TNDmzAwqYSnstWSHtpVA.loofr\"\n      },\n      \"saleInfo\": {\n        \"country\": \"string\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": true,\n        \"listPrice\": {\n          \"amount\": 7039.889578493842,\n          \"currencyCode\": \"string\"\n        }\n      },\n      \"accessInfo\": {\n        \"country\": \"string\",\n        \"viewability\": \"UNKNOWN\",\n        \"embeddable\": false,\n        \"publicDomain\": true,\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        }\n      }\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"etag\": \"string\",\n      \"selfLink\": \"https://sTtZNJvxRwRokoINbMZJ.eosjyHKlG8j,MujlV9fYptSQ,DbCOd429aGB+ffhQGy2PHZPUPG9wPtThrgJ\",\n      \"volumeInfo\": {\n        \"title\": \"string\",\n        \"subtitle\": \"string\",\n        \"authors\": [\n          \"string\",\n          \"string\"\n        ],\n        \"publisher\": \"string\",\n        \"publishedDate\": \"string\",\n        \"description\": \"string\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"string\"\n          },\n          {\n            \"type\": \"ISSN\",\n            \"identifier\": \"string\"\n          }\n        ],\n        \"pageCount\": 4360,\n        \"categories\": [\n          \"string\",\n          \"string\"\n        ],\n        \"averageRating\": 1115.3424520033873,\n        \"ratingsCount\": 4534,\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://lnBYtOFE.sqsaN2oTjCpDLgbw1,SZp\",\n          \"thumbnail\": \"http://FdeRoqQs.ojbo5f-AGFEG\"\n        },\n        \"language\": \"string\",\n        \"previewLink\": \"https://fvQBxcQoepPhArqspFjtmbvyuHioiE.qlktLOQosngjSS.5IsvHp3sT79JHlHrTChpL8lV,LDsEjxFT8XWZ4zY4Bj7\",\n        \"infoLink\": \"http://qiIYQLC.snGagNElHAG5rio-FS1ZlYyYhfBnA1ZCA8,s249uTKUIJZ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"string\",\n        \"saleability\": \"FOR_PREORDER\",\n        \"isEbook\": false,\n        \"listPrice\": {\n          \"amount\": 6929.694132738063,\n          \"currencyCode\": \"string\"\n        }\n      },\n      \"accessInfo\": {\n        \"country\": \"string\",\n        \"viewability\": \"ALL_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        }\n      }\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "221467b5-e8a2-48ea-90ec-181def999693",
+      "name": "List my bookshelves",
+      "request": {
+        "name": "List my bookshelves",
+        "description": {
+          "content": "Retrieves a list of bookshelves belonging to the authenticated user.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "mylibrary",
+            "bookshelves"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "eada575c-5e4a-4362-b634-e3943da1be54",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "mylibrary",
+                "bookshelves"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"kind\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": 266,\n      \"selfLink\": \"http://aRdOdyAbPWHTdocImYSDnuZjUMvXxs.yejfPCdHWk0nsrW7Ft2.qJ,\",\n      \"title\": \"string\",\n      \"access\": \"PRIVATE\",\n      \"updated\": \"1977-05-19T11:22:56.580Z\",\n      \"volumeCount\": 1809\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": 778,\n      \"selfLink\": \"http://JpcRTeLRMMcFBgugvxoQtOH.xhadfGapf25JhEE.6cNHyxOZcMhsfF\",\n      \"title\": \"string\",\n      \"access\": \"PRIVATE\",\n      \"updated\": \"2001-10-08T01:51:36.936Z\",\n      \"volumeCount\": 3880\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "dcc84035-19e6-4b59-993b-89e08f20879c",
+      "name": "Add volume to bookshelf",
+      "request": {
+        "name": "Add volume to bookshelf",
+        "description": {
+          "content": "Adds a volume to a bookshelf.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "mylibrary",
+            "bookshelves",
+            ":shelf",
+            "addVolume"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "volumeId",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "shelf",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "618c7869-0a9c-42a5-bab4-36bef2b4f1dc",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "mylibrary",
+                "bookshelves",
+                ":shelf",
+                "addVolume"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "volumeId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shelf",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2d104640-4d29-48fd-afe4-3212ddc7a307",
+      "name": "Remove volume from bookshelf",
+      "request": {
+        "name": "Remove volume from bookshelf",
+        "description": {
+          "content": "Removes a volume from a bookshelf.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "mylibrary",
+            "bookshelves",
+            ":shelf",
+            "removeVolume"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "volumeId",
+              "value": "<string>",
+              "description": "(Required) "
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "shelf",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "bf68f2a7-e4bd-4002-82fe-4f7ad81d71f0",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "mylibrary",
+                "bookshelves",
+                ":shelf",
+                "removeVolume"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "volumeId",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shelf",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.googleapis.com/books/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/books"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2d6f2200-369a-4707-bea2-28ec6a0a21cf",
+    "name": "Google Books API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Books API allows you to perform full-text searches and retrieve book information, viewability, and eBook availability. You can also manage personal bookshelves, access volume metadata, and work with user library data.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}

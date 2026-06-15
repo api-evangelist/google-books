@@ -1,0 +1,220 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Books API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search for volumes",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/books/v1/volumes",
+        "params": [
+          {
+            "name": "q",
+            "value": "",
+            "type": "query",
+            "description": "Full-text search query string."
+          },
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "startIndex",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "orderBy",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "printType",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "filter",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "langRestrict",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Performs a book search."
+    },
+    {
+      "info": {
+        "name": "Get a volume",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/books/v1/volumes/:volumeId",
+        "params": [
+          {
+            "name": "volumeId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Gets volume information for a single volume."
+    },
+    {
+      "info": {
+        "name": "List bookshelves",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/books/v1/users/:userId/bookshelves",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieves a list of public bookshelves for the specified user."
+    },
+    {
+      "info": {
+        "name": "Get a bookshelf",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/books/v1/users/:userId/bookshelves/:shelf",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "shelf",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieves metadata for a specific bookshelf for the specified user."
+    },
+    {
+      "info": {
+        "name": "List volumes in a bookshelf",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/books/v1/users/:userId/bookshelves/:shelf/volumes",
+        "params": [
+          {
+            "name": "userId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "shelf",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "maxResults",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "startIndex",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Retrieves volumes in a specific bookshelf for the specified user."
+    },
+    {
+      "info": {
+        "name": "List my bookshelves",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://www.googleapis.com/books/v1/mylibrary/bookshelves"
+      },
+      "docs": "Retrieves a list of bookshelves belonging to the authenticated user."
+    },
+    {
+      "info": {
+        "name": "Add volume to bookshelf",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.googleapis.com/books/v1/mylibrary/bookshelves/:shelf/addVolume",
+        "params": [
+          {
+            "name": "shelf",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "volumeId",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Adds a volume to a bookshelf."
+    },
+    {
+      "info": {
+        "name": "Remove volume from bookshelf",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://www.googleapis.com/books/v1/mylibrary/bookshelves/:shelf/removeVolume",
+        "params": [
+          {
+            "name": "shelf",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "volumeId",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Removes a volume from a bookshelf."
+    }
+  ],
+  "bundled": true
+}
