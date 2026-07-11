@@ -1,0 +1,17 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/books.yml
+schemes:
+- name: oauth2
+  source: openapi/books.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://accounts.google.com/o/oauth2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+scopes:
+- scope: https://www.googleapis.com/auth/books
+  description: Manage your books
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/books.yml

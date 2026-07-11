@@ -32,6 +32,8 @@ apis:
       - type: JSONSchema
         url: json-schema/books.json
 common:
+  - type: OAuthScopes
+    url: scopes/google-books-scopes.yml
   - type: GettingStarted
     url: https://developers.google.com/books/docs/v1/getting_started
   - type: Pricing
