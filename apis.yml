@@ -32,6 +32,12 @@ apis:
       - type: JSONSchema
         url: json-schema/books.json
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-books-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-books-domain-security.yml
+  - type: Authentication
+    url: authentication/google-books-authentication.yml
   - type: OAuthScopes
     url: scopes/google-books-scopes.yml
   - type: GettingStarted
