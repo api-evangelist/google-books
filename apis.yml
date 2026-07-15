@@ -32,6 +32,8 @@ apis:
       - type: JSONSchema
         url: json-schema/books.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-books-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-books-vulnerability-disclosure.yml
   - type: DomainSecurity
