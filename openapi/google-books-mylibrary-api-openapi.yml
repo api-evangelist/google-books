@@ -1,0 +1,119 @@
+openapi: 3.1.0
+info:
+  title: Google Books Mylibrary API
+  description: The Google Books API allows you to perform full-text searches and retrieve book information, viewability, and eBook availability. You can also manage personal bookshelves, access volume metadata, and work with user library data.
+  version: v1
+  contact:
+    name: Google
+    url: https://developers.google.com/books
+servers:
+- url: https://www.googleapis.com/books/v1
+security:
+- oauth2: []
+- apiKey: []
+tags:
+- name: Mylibrary
+paths:
+  /mylibrary/bookshelves:
+    get:
+      operationId: listMyBookshelves
+      summary: List my bookshelves
+      description: Retrieves a list of bookshelves belonging to the authenticated user.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookshelfListResponse'
+      tags:
+      - Mylibrary
+  /mylibrary/bookshelves/{shelf}/addVolume:
+    post:
+      operationId: addVolumeToBookshelf
+      summary: Add volume to bookshelf
+      description: Adds a volume to a bookshelf.
+      parameters:
+      - name: shelf
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: volumeId
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Mylibrary
+  /mylibrary/bookshelves/{shelf}/removeVolume:
+    post:
+      operationId: removeVolumeFromBookshelf
+      summary: Remove volume from bookshelf
+      description: Removes a volume from a bookshelf.
+      parameters:
+      - name: shelf
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: volumeId
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+      tags:
+      - Mylibrary
+components:
+  schemas:
+    BookshelfListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookshelf'
+    Bookshelf:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: books#bookshelf
+        id:
+          type: integer
+        selfLink:
+          type: string
+          format: uri
+        title:
+          type: string
+        access:
+          type: string
+          enum:
+          - PRIVATE
+          - PUBLIC
+        updated:
+          type: string
+          format: date-time
+        volumeCount:
+          type: integer
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/books: Manage your books
+    apiKey:
+      type: apiKey
+      in: query
+      name: key
