@@ -5,7 +5,20 @@ description: >-
   availability. You can search for volumes, access detailed metadata including authors, publishers, and ISBNs, manage
   personal bookshelves, and determine content accessibility.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-books.png
 url: https://raw.githubusercontent.com/api-evangelist/google-books/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -19,18 +32,42 @@ tags:
   - Reading
   - Search
 apis:
-  - aid: google-books:google-books
-    name: Google Books API V1
-    description: >-
-      The Google Books API provides programmatic access to Google Books data. Search for volumes, retrieve book
-      metadata, manage bookshelves, and access eBook availability information.
-    humanURL: https://developers.google.com/books
-    baseURL: https://www.googleapis.com/books/v1
-    properties:
-      - type: OpenAPI
-        url: openapi/books.yml
-      - type: JSONSchema
-        url: json-schema/books.json
+- aid: google-books:google-books-mylibrary-api
+  name: Google Books Mylibrary API
+  description: The Mylibrary API from Google Books — 3 operation(s) for mylibrary.
+  humanURL: https://developers.google.com/books
+  baseURL: https://www.googleapis.com/books/v1
+  tags:
+  - Mylibrary
+  properties:
+  - type: OpenAPI
+    url: openapi/google-books-mylibrary-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/books.json
+- aid: google-books:google-books-users-api
+  name: Google Books Users API
+  description: The Users API from Google Books — 3 operation(s) for users.
+  humanURL: https://developers.google.com/books
+  baseURL: https://www.googleapis.com/books/v1
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/google-books-users-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/books.json
+- aid: google-books:google-books-volumes-api
+  name: Google Books Volumes API
+  description: The Volumes API from Google Books — 2 operation(s) for volumes.
+  humanURL: https://developers.google.com/books
+  baseURL: https://www.googleapis.com/books/v1
+  tags:
+  - Volumes
+  properties:
+  - type: OpenAPI
+    url: openapi/google-books-volumes-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/books.json
 common:
   - type: AgenticAccess
     url: agentic-access/google-books-agentic-access.yml
