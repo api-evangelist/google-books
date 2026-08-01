@@ -1,0 +1,18 @@
+{
+  "provider": "google-books",
+  "sources": [
+    "google-books-mylibrary-api-openapi.yml",
+    "google-books-users-api-openapi.yml",
+    "google-books-volumes-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-books-mylibrary-api-openapi.yml",
+    "google-books-users-api-openapi.yml",
+    "google-books-volumes-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
