@@ -1,0 +1,337 @@
+{
+  "item": [
+    {
+      "id": "81925fdf-ef1f-4611-92be-b9533d2b418a",
+      "name": "Mylibrary",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d431d1d3-70de-44f1-9978-6eed995572f1",
+          "name": "List my bookshelves",
+          "request": {
+            "name": "List my bookshelves",
+            "description": {
+              "content": "Retrieves a list of bookshelves belonging to the authenticated user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "mylibrary",
+                "bookshelves"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f1f618ef-5f2e-46b6-a784-d26ba4ff99c3",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mylibrary",
+                    "bookshelves"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": 6731,\n      \"selfLink\": \"https://HGYQFhGdMmThaDwxdUxPaLlZi.rqmrJUSi6c2TpS6WpRHvi.CTNErrVHjhaYeCYZb2FCvrBZc-EC6O3NBctoeH3ubrPU\",\n      \"title\": \"string\",\n      \"access\": \"PRIVATE\",\n      \"updated\": \"1947-10-04T23:44:48.003Z\",\n      \"volumeCount\": 8527\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": 8657,\n      \"selfLink\": \"https://QUfzUNNLnuuBTfiUWrXgWqDFxXzi.zqHs3Q.kGFSvxr,ldrKjjKYxsgf\",\n      \"title\": \"string\",\n      \"access\": \"PRIVATE\",\n      \"updated\": \"1969-08-14T23:06:38.941Z\",\n      \"volumeCount\": 6110\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3858d9a4-40da-478d-a7ff-819e4be03731",
+          "name": "Add volume to bookshelf",
+          "request": {
+            "name": "Add volume to bookshelf",
+            "description": {
+              "content": "Adds a volume to a bookshelf.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "mylibrary",
+                "bookshelves",
+                ":shelf",
+                "addVolume"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "volumeId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shelf",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dd58ca69-37e7-4e7b-ba5e-593125f2e8f3",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mylibrary",
+                    "bookshelves",
+                    ":shelf",
+                    "addVolume"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "volumeId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shelf",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "be25796a-c1cc-474e-8edf-e68da6f34f44",
+          "name": "Remove volume from bookshelf",
+          "request": {
+            "name": "Remove volume from bookshelf",
+            "description": {
+              "content": "Removes a volume from a bookshelf.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "mylibrary",
+                "bookshelves",
+                ":shelf",
+                "removeVolume"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "volumeId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shelf",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e4625330-d70d-4af5-847f-fbaf58b5c621",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "mylibrary",
+                    "bookshelves",
+                    ":shelf",
+                    "removeVolume"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "volumeId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shelf",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.googleapis.com/books/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/books"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1c5a3e78-55e4-43c1-9974-b5f9d2a7afd1",
+    "name": "Google Books Mylibrary API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Books API allows you to perform full-text searches and retrieve book information, viewability, and eBook availability. You can also manage personal bookshelves, access volume metadata, and work with user library data.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}

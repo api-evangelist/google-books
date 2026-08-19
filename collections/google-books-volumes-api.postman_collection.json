@@ -1,0 +1,293 @@
+{
+  "item": [
+    {
+      "id": "7740dee5-8a01-468b-b9af-47f79c76a03d",
+      "name": "Volumes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bc1efcad-c6f0-4588-a61a-4d50c1f8ff47",
+          "name": "Search for volumes",
+          "request": {
+            "name": "Search for volumes",
+            "description": {
+              "content": "Performs a book search.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "volumes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "(Required) Full-text search query string."
+                },
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "startIndex",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "orderBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "printType",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "langRestrict",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "70c2ffc2-5c4f-4f45-896a-9ad9f545cbe8",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "volumes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "startIndex",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "orderBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "printType",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "langRestrict",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"totalItems\": 1413,\n  \"items\": [\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"etag\": \"string\",\n      \"selfLink\": \"https://TTVHshDCutYboj.jianupDJEvucNRZOZwDeT0.mjRxRQFvc8J1\",\n      \"volumeInfo\": {\n        \"title\": \"string\",\n        \"subtitle\": \"string\",\n        \"authors\": [\n          \"string\",\n          \"string\"\n        ],\n        \"publisher\": \"string\",\n        \"publishedDate\": \"string\",\n        \"description\": \"string\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"OTHER\",\n            \"identifier\": \"string\"\n          },\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"string\"\n          }\n        ],\n        \"pageCount\": 698,\n        \"categories\": [\n          \"string\",\n          \"string\"\n        ],\n        \"averageRating\": 4738.230446394405,\n        \"ratingsCount\": 3633,\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://JorhmgWoajc.lpcQeyxHFWCdBHf+b-yRiUbgzy+aWCjMlogIHz7vP\",\n          \"thumbnail\": \"https://T.lzkoZh.exkRq35O\"\n        },\n        \"language\": \"string\",\n        \"previewLink\": \"https://hlSMlEzHPOrKwdmHdjpkCwrJdDb.xvqtftjhjT4QcpdYlL1\",\n        \"infoLink\": \"https://NSZXnQUmCeNKxROIzqvjwQBosOGOyZbH.kygwsDDkR.bbB.rDF7d\"\n      },\n      \"saleInfo\": {\n        \"country\": \"string\",\n        \"saleability\": \"FOR_SALE\",\n        \"isEbook\": false,\n        \"listPrice\": {\n          \"amount\": 5707.929231957616,\n          \"currencyCode\": \"string\"\n        }\n      },\n      \"accessInfo\": {\n        \"country\": \"string\",\n        \"viewability\": \"ALL_PAGES\",\n        \"embeddable\": true,\n        \"publicDomain\": true,\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": true\n        }\n      }\n    },\n    {\n      \"kind\": \"string\",\n      \"id\": \"string\",\n      \"etag\": \"string\",\n      \"selfLink\": \"http://mQSHxlc.onG5OQeAF5e80psV1Hl0YlALkAVs5HVjgN32J-HXCwZD2c6kdS9wTvB1PwQyLt6yGLlFnnIc\",\n      \"volumeInfo\": {\n        \"title\": \"string\",\n        \"subtitle\": \"string\",\n        \"authors\": [\n          \"string\",\n          \"string\"\n        ],\n        \"publisher\": \"string\",\n        \"publishedDate\": \"string\",\n        \"description\": \"string\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"string\"\n          },\n          {\n            \"type\": \"OTHER\",\n            \"identifier\": \"string\"\n          }\n        ],\n        \"pageCount\": 6575,\n        \"categories\": [\n          \"string\",\n          \"string\"\n        ],\n        \"averageRating\": 5775.985571778764,\n        \"ratingsCount\": 6389,\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://xAFeVQkAYbfmAOMc.mmiysfFOhvHYlKTeKcD-qx5uRuI-eL-sg3+M\",\n          \"thumbnail\": \"https://ugNDeQsZTUzqgTRfwXLCDEknuAdaPjPT.kizLowYdPRMwWl7ohw\"\n        },\n        \"language\": \"string\",\n        \"previewLink\": \"https://CzFPnaUNQDvTY.ousR8z1vQOkQG--acfN7+Wfu7ksAM5MR1Ts3l0MbhjTDr\",\n        \"infoLink\": \"http://hLNiaROBHrkmvAkzzbgPhVpMxUWIBDh.rhju.z3W.cuIT1cPXscnqmM1Eqc0EYhi.T\"\n      },\n      \"saleInfo\": {\n        \"country\": \"string\",\n        \"saleability\": \"FOR_SALE\",\n        \"isEbook\": true,\n        \"listPrice\": {\n          \"amount\": 5750.541639986208,\n          \"currencyCode\": \"string\"\n        }\n      },\n      \"accessInfo\": {\n        \"country\": \"string\",\n        \"viewability\": \"PARTIAL\",\n        \"embeddable\": true,\n        \"publicDomain\": true,\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": true\n        }\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "adc76da4-77f3-41cc-9145-4b05ab4b8c07",
+          "name": "Get a volume",
+          "request": {
+            "name": "Get a volume",
+            "description": {
+              "content": "Gets volume information for a single volume.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "volumes",
+                ":volumeId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "volumeId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "723545af-019b-4db2-831c-76618a53a7df",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "volumes",
+                    ":volumeId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "volumeId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"kind\": \"string\",\n  \"id\": \"string\",\n  \"etag\": \"string\",\n  \"selfLink\": \"http://FxQzySGCCooDhMOZfmHPEkZS.aykvVBIJ,N6pIP+TsJkVlbMW6C,J7XW6A4rzKC+ndRPJolJG,Yovvh5qReoQ2UEPhdtETzLacK0W\",\n  \"volumeInfo\": {\n    \"title\": \"string\",\n    \"subtitle\": \"string\",\n    \"authors\": [\n      \"string\",\n      \"string\"\n    ],\n    \"publisher\": \"string\",\n    \"publishedDate\": \"string\",\n    \"description\": \"string\",\n    \"industryIdentifiers\": [\n      {\n        \"type\": \"ISBN_10\",\n        \"identifier\": \"string\"\n      },\n      {\n        \"type\": \"ISBN_13\",\n        \"identifier\": \"string\"\n      }\n    ],\n    \"pageCount\": 9451,\n    \"categories\": [\n      \"string\",\n      \"string\"\n    ],\n    \"averageRating\": 2322.685305386032,\n    \"ratingsCount\": 1941,\n    \"imageLinks\": {\n      \"smallThumbnail\": \"http://ByIFQpuCdewVywv.oeH30MBFktnWS8kWLwik\",\n      \"thumbnail\": \"http://FCOHZVReY.dqveQBfzmDs4mvtzEiP1AW2rjeUN99lzOBXEZpuYriatnH31lUTjbDGksVw\"\n    },\n    \"language\": \"string\",\n    \"previewLink\": \"https://SXdggTKwU.fwQvMmXU,tIVtgTqqSo1cUjGJbR+cNTVTrI00w\",\n    \"infoLink\": \"https://asVFkDtncvsOjLQwOGxvC.nkmYLUc5X3GXt1e7whF35fd11G.dN\"\n  },\n  \"saleInfo\": {\n    \"country\": \"string\",\n    \"saleability\": \"FOR_PREORDER\",\n    \"isEbook\": true,\n    \"listPrice\": {\n      \"amount\": 1840.0711316788665,\n      \"currencyCode\": \"string\"\n    }\n  },\n  \"accessInfo\": {\n    \"country\": \"string\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": false,\n    \"publicDomain\": true,\n    \"epub\": {\n      \"isAvailable\": true\n    },\n    \"pdf\": {\n      \"isAvailable\": false\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://www.googleapis.com/books/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/books"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "11f843a0-b92b-4957-9cd0-e0d65226dd13",
+    "name": "Google Books Mylibrary Volumes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Google Books API allows you to perform full-text searches and retrieve book information, viewability, and eBook availability. You can also manage personal bookshelves, access volume metadata, and work with user library data.\n\nContact Support:\n Name: Google",
+      "type": "text/plain"
+    }
+  }
+}
