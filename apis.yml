@@ -37,7 +37,7 @@ modified: '2026-05-19'
 specificationVersion: '0.23'
 tags:
   - Books
-  - eBooks
+  - Ebooks
   - Google
   - Library
   - Publishing
@@ -58,7 +58,7 @@ apis:
   humanURL: https://developers.google.com/books
   baseURL: https://www.googleapis.com/books/v1
   tags:
-  - Mylibrary
+  - My Library
   tags_raw:
   - Mylibrary
   properties:
