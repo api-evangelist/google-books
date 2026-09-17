@@ -52,20 +52,6 @@ tags_raw:
   - Reading
   - Search
 apis:
-- aid: google-books:google-books-mylibrary-api
-  name: Google Books Mylibrary API
-  description: The Mylibrary API from Google Books — 3 operation(s) for mylibrary.
-  humanURL: https://developers.google.com/books
-  baseURL: https://www.googleapis.com/books/v1
-  tags:
-  - My Library
-  tags_raw:
-  - Mylibrary
-  properties:
-  - type: OpenAPI
-    url: openapi/google-books-mylibrary-api-openapi.yml
-  - type: JSONSchema
-    url: json-schema/books.json
 - aid: google-books:google-books-users-api
   name: Google Books Users API
   description: The Users API from Google Books — 3 operation(s) for users.
@@ -90,6 +76,18 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/google-books-volumes-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/books.json
+- aid: google-books:google-books-my-library-api
+  name: Google Books My Library API
+  description: The My Library API from Google Books — 3 operation(s) for my library.
+  humanURL: https://developers.google.com/books
+  baseURL: https://www.googleapis.com/books/v1
+  tags:
+  - My Library
+  properties:
+  - type: OpenAPI
+    url: openapi/google-books-my-library-api-openapi.yml
   - type: JSONSchema
     url: json-schema/books.json
 common:
