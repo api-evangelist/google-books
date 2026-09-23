@@ -12,7 +12,7 @@ security:
 - oauth2: []
 - apiKey: []
 tags:
-- name: Mylibrary
+- name: My Library
 paths:
   /mylibrary/bookshelves:
     get:
@@ -27,7 +27,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BookshelfListResponse'
       tags:
-      - Mylibrary
+      - My Library
   /mylibrary/bookshelves/{shelf}/addVolume:
     post:
       operationId: addVolumeToBookshelf
@@ -48,7 +48,7 @@ paths:
         '200':
           description: Successful response
       tags:
-      - Mylibrary
+      - My Library
   /mylibrary/bookshelves/{shelf}/removeVolume:
     post:
       operationId: removeVolumeFromBookshelf
@@ -69,18 +69,9 @@ paths:
         '200':
           description: Successful response
       tags:
-      - Mylibrary
+      - My Library
 components:
   schemas:
-    BookshelfListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bookshelf'
     Bookshelf:
       type: object
       properties:
@@ -104,6 +95,15 @@ components:
           format: date-time
         volumeCount:
           type: integer
+    BookshelfListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookshelf'
   securitySchemes:
     oauth2:
       type: oauth2

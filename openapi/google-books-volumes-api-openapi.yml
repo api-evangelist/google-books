@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Books Mylibrary Volumes API
+  title: Google Books Volumes API
   description: The Google Books API allows you to perform full-text searches and retrieve book information, viewability, and eBook availability. You can also manage personal bookshelves, access volume metadata, and work with user library data.
   version: v1
   contact:

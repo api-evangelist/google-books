@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Books Mylibrary Users API
+  title: Google Books Users API
   description: The Google Books API allows you to perform full-text searches and retrieve book information, viewability, and eBook availability. You can also manage personal bookshelves, access volume metadata, and work with user library data.
   version: v1
   contact:
@@ -117,15 +117,6 @@ components:
           format: date-time
         volumeCount:
           type: integer
-    BookshelfListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bookshelf'
     Volume:
       type: object
       properties:
@@ -255,6 +246,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Volume'
+    BookshelfListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookshelf'
   securitySchemes:
     oauth2:
       type: oauth2

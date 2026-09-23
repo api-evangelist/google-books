@@ -1,23 +1,38 @@
 {
   "provider": "google-books",
   "sources": [
-    "google-books-mylibrary-api-openapi.yml",
-    "google-books-users-api-openapi.yml",
-    "google-books-volumes-api-openapi.yml"
+    "_original/books.yml"
   ],
   "outputs": [
     "google-books-mylibrary-api-openapi.yml",
     "google-books-users-api-openapi.yml",
     "google-books-volumes-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-books-mylibrary-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-books-users-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-books-volumes-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: already-registered"
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "books.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "books.yml: tagged paths GET /volumes -> Volumes",
+    "books.yml: tagged paths GET /volumes/{volumeId} -> Volumes",
+    "books.yml: tagged paths GET /users/{userId}/bookshelves -> Users",
+    "books.yml: tagged paths GET /users/{userId}/bookshelves/{shelf} -> Users",
+    "books.yml: tagged paths GET /users/{userId}/bookshelves/{shelf}/volumes -> Users",
+    "books.yml: tagged paths GET /mylibrary/bookshelves -> Mylibrary",
+    "books.yml: tagged paths POST /mylibrary/bookshelves/{shelf}/addVolume -> Mylibrary",
+    "books.yml: tagged paths POST /mylibrary/bookshelves/{shelf}/removeVolume -> Mylibrary",
+    "books.yml: declared missing tag: Mylibrary",
+    "books.yml: declared missing tag: Users",
+    "books.yml: declared missing tag: Volumes",
+    "superseded outputs removed: google-books-my-library-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 3 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "google-books-my-library-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-books-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-books-volumes-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
