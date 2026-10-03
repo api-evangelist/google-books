@@ -72,15 +72,6 @@ paths:
       - My Library
 components:
   schemas:
-    BookshelfListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bookshelf'
     Bookshelf:
       type: object
       properties:
@@ -104,6 +95,15 @@ components:
           format: date-time
         volumeCount:
           type: integer
+    BookshelfListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookshelf'
   securitySchemes:
     oauth2:
       type: oauth2

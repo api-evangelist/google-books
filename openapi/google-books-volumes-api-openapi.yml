@@ -95,6 +95,17 @@ paths:
       - Volumes
 components:
   schemas:
+    VolumeListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        totalItems:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Volume'
     Volume:
       type: object
       properties:
@@ -213,17 +224,6 @@ components:
               properties:
                 isAvailable:
                   type: boolean
-    VolumeListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        totalItems:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Volume'
   securitySchemes:
     oauth2:
       type: oauth2

@@ -94,6 +94,40 @@ paths:
       - Users
 components:
   schemas:
+    Bookshelf:
+      type: object
+      properties:
+        kind:
+          type: string
+          const: books#bookshelf
+        id:
+          type: integer
+        selfLink:
+          type: string
+          format: uri
+        title:
+          type: string
+        access:
+          type: string
+          enum:
+          - PRIVATE
+          - PUBLIC
+        updated:
+          type: string
+          format: date-time
+        volumeCount:
+          type: integer
+    VolumeListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        totalItems:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Volume'
     Volume:
       type: object
       properties:
@@ -221,40 +255,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Bookshelf'
-    Bookshelf:
-      type: object
-      properties:
-        kind:
-          type: string
-          const: books#bookshelf
-        id:
-          type: integer
-        selfLink:
-          type: string
-          format: uri
-        title:
-          type: string
-        access:
-          type: string
-          enum:
-          - PRIVATE
-          - PUBLIC
-        updated:
-          type: string
-          format: date-time
-        volumeCount:
-          type: integer
-    VolumeListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        totalItems:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Volume'
   securitySchemes:
     oauth2:
       type: oauth2
