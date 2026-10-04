@@ -128,6 +128,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Volume'
+    BookshelfListResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bookshelf'
     Volume:
       type: object
       properties:
@@ -246,15 +255,6 @@ components:
               properties:
                 isAvailable:
                   type: boolean
-    BookshelfListResponse:
-      type: object
-      properties:
-        kind:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bookshelf'
   securitySchemes:
     oauth2:
       type: oauth2
